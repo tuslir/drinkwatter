@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: dba628e3f1505c84395b83dbd457b5e1
+  - enabled: 1
+    path: Assets/Scenes/ToffeScene.unity
+    guid: 886e9c69df0023a428e2cb1dc31d88eb
+  - enabled: 1
+    path: Assets/Scenes/TonjeScene.unity
+    guid: a3b3cfbb647e4504e91de1b27be58f64
   m_configObjects: {}
