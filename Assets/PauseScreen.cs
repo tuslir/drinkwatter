@@ -17,19 +17,18 @@ public class PauseScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
-    public void PauseGame()
-    {
-
-        if (!isPaused)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
+
+
+            if(!isPaused)
+            {
             isPaused = true;
             print("paused");
             Time.timeScale = 0;
             pauseText.SetActive(true);
-        }
+            }
         else
         {
             isPaused = false;
@@ -37,6 +36,13 @@ public class PauseScreen : MonoBehaviour
             Time.timeScale = 1;
             pauseText.SetActive(false);
         }
+        }
+
+    }
+
+    public void PauseGame()
+    {
+
 
     }
 
