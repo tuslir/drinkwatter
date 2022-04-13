@@ -10,12 +10,14 @@ public class DrinkScript : MonoBehaviour
 
     void Start()
     {
-        part = GetComponent<ParticleSystem>();              //Fetches Particle system on other object
+        part = GetComponent<ParticleSystem>();                                                      //Fetches Particle system on other object
+        HydrationBarHandler.SetHealthBarValue(0f);                                                  //Sets start value to 0
     }
 
-    private void OnParticleCollision(GameObject other)      //Detects collision from Particles
+    private void OnParticleCollision(GameObject other)                                              //Detects collision from Particles
     {
-        Debug.Log("water drank");                       
+        HydrationBarHandler.SetHealthBarValue(HydrationBarHandler.GetHealthBarValue() +0.05f);     //Every time a particle hits, increase hydration by 0.05
+        Debug.Log("water drank, hydrationlevel currently" + HydrationBarHandler.GetHealthBarValue());                       
     }
 
    
