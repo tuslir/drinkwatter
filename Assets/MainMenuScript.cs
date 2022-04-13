@@ -37,13 +37,13 @@ public class MainMenuScript : MonoBehaviour
 
     public void ToffePlay()
     {
-        print("starting game as TOFFE");
-        //add scene TOFFE
+        SceneManager.LoadScene(1);
+      
     }
 
     public void TonjePlay()
     {
-        print("starting game as TONJE");
-        //add scene TONJE
+        SceneManager.LoadScene(2);
     }
+
 }

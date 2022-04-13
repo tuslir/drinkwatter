@@ -7,11 +7,12 @@ public class PauseScreen : MonoBehaviour
 
     public GameObject pauseText;
     bool isPaused;
+    public static bool gameWon;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameWon = false;
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class PauseScreen : MonoBehaviour
         {
 
 
-            if(!isPaused)
+            if(!isPaused&&!gameWon)
             {
             isPaused = true;
             print("paused");

@@ -7,6 +7,7 @@ public class DrinkingManager : MonoBehaviour
     [Header("WinGame Screen goes here, must be inactive beforehand")]
     public GameObject youWonGame;
 
+    
     private void Update()
     {
         if (HydrationBarHandler.GetHealthBarValue() == 1f)
@@ -17,6 +18,7 @@ public class DrinkingManager : MonoBehaviour
 
     private void win()
     {
+        PauseScreen.gameWon = true;
         youWonGame.SetActive(true);
     }
 }
